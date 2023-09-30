@@ -5220,6 +5220,7 @@ __webpack_require__.r(__webpack_exports__);
       }).length;
     },
     postuserChoice: function postuserChoice() {
+      //post quiz answers to database table
       //alert("ok")
       axios.post('/quiz/create', {
         answerId: this.currentAnswer,

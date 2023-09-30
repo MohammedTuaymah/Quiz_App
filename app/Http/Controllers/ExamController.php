@@ -63,7 +63,7 @@ class ExamController extends Controller
         return view('quiz',compact('quiz','time','quizQuestions','authUserHasPlayedQuiz'));
     }
 
-    public function postQuiz(Request $request){
+    public function postQuiz(Request $request){//post quiz answers to database table
         $questionId= $request['questionId'];
         $answerId = $request['answerId'];
         $quizId = $request['quizId'];

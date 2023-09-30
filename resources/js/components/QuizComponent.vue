@@ -36,8 +36,8 @@
 
                         <div v-show="questionIndex!=questions.length">
 
-                            <button v-if="questionIndex>0" class="btn btn-success float-end"@click="prev">Prev</button>
-                            <button class="btn btn-success float-start"@click="next();postuserChoice()">Next</button>
+                            <button v-if="questionIndex>0" class="btn btn-success float-end" @click="prev">Prev</button>
+                            <button class="btn btn-success float-start" @click="next();postuserChoice()">Next</button>
 
                         </div>
 
@@ -103,7 +103,7 @@ import moment from 'moment'
                     return val===true;
                 }).length
             },
-            postuserChoice(){
+            postuserChoice(){//post quiz answers to database table
                 //alert("ok")
                 axios.post('/quiz/create',{
                     answerId:this.currentAnswer,
